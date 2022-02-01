@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stegnogrphy</title>
+    <script src="steganography.min.js"></script>
+  </head>
+  <body>
+    <h1>ENCODING SECTION</h1>
+    <input
+      type="file"
+      name="img"
+      id=""
+      accept="image/*"
+      onchange="readURL(this)"
+    />
+    <div class="">
+      <h3>Source Image</h3>
+      <img id="image1" src="" alt="" width="300px" height="300px" />
+      <br />
+      <input id="text" type="text" />
+      <button onclick="hideText()">Hide message into Image</button>
+    </div>
+    <div>
+      <h3>Encoded Image</h3>
+      <img
+        id="image2"
+        src=""
+        alt="you can right click and download this image"
+        width="300px"
+        height="300px"
+      />
+
+      <br />
+    </div>
+    <div class="">
+      <h1>DECODING SECTION</h1>
+      <input
+        type="file"
+        name="img1"
+        id=""
+        accept="image/*"
+        onchange="decodeURL(this)"
+      />
+      <br />
+      <button onclick="showMessage()">Show message</button>
+      <h4 id="show"></h4>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
